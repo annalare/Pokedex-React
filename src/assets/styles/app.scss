@@ -1,7 +1,15 @@
-$theme-colors(
-  "primary": #731ab7
-)
+@import "../node_modules/bootstrap/scss/bootstrap";
 
-@import "../../node_modules/bootstrap/scss/bootstrap";
+$theme-colors: (
+  "primary": #731ab7,
+  "success": #63dc3e,
+);
 
+body {
+  min-height: 75rem;
+  padding-top: 4.5rem;
+}
 
+.form-inline {
+  display: flex;
+}
