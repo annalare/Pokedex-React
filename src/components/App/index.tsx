@@ -6,7 +6,7 @@ import { Pokemon, PokemonResult } from "../../types";
 import Header from "../Header";
 import Card from "../Card";
 
-import "../../assets/styles/app.scss";
+import "../../assets/styles/_app.scss";
 
 function App() {
   const [data, setData] = useState<Array<Pokemon>>([]);
@@ -26,7 +26,7 @@ function App() {
   }, [data]);
 
   const fetchPokemons = useCallback(async () => {
-    const response = await api.get("/pokemon?limit=12").then((res) => {
+    const response = await api.get("/pokemon?limit=150").then((res) => {
       return res.data.results;
     });
 
@@ -50,7 +50,7 @@ function App() {
       <Header />
       <Container fluid="lg">
         {pokemonGroups.map((group: Array<Pokemon>, index) => (
-          <CardGroup key={index} className="mb-3">
+          <CardGroup key={index} className="cardPokemon m-3 ">
             {group.map((pokemon: Pokemon) => (
               <Card key={pokemon.id} pokemon={pokemon} />
             ))}

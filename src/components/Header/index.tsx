@@ -9,9 +9,9 @@ import {
 
 function Header() {
   return (
-    <Navbar bg="primary" variant="dark" fixed="top">
+    <Navbar className="headerNav" variant="dark" fixed="top">
       <Container fluid="lg">
-        <Navbar.Brand href="#">Pokedash</Navbar.Brand>
+        <Navbar.Brand href="#">Pokedex</Navbar.Brand>
         <Form className="form-inline">
           <FormControl type="text" placeholder="Search" />
           <Button variant="success">Buscar</Button>

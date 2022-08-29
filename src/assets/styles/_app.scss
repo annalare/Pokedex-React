@@ -1,0 +1,34 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$theme-colors: (
+  "primary": #f70909,
+  "success": #8486da,
+);
+
+body {
+  min-height: 75rem;
+  padding-top: 4.5rem;
+  background-color: #2124e9;
+}
+
+.form-inline {
+  display: flex;
+}
+
+.headerNav {
+  background-color: #f70909;
+}
+.cardPokemon {
+  max-width: 1000px;
+  height: 450px;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 15px;
+  &:hover {
+    background-color: #8385ee;
+    transition: 1s;
+  }
+}
+.cardImg {
+  width: 100px;
+}

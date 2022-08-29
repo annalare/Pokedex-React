@@ -8,8 +8,14 @@ type CardProps = {
 
 function Card({ pokemon }: CardProps) {
   return (
-    <CardBase>
-      <CardBase.Img variant="top" src={pokemon.sprites.front_default} />
+    <CardBase className="cardPokemon ">
+      <CardBase.Img
+        className=".cardImg"
+        variant="top"
+        src={pokemon.sprites.front_default}
+      />
+      <p>{pokemon.name}</p>
+      <span>{pokemon.abilities[0].ability.name}</span>
     </CardBase>
   );
 }
