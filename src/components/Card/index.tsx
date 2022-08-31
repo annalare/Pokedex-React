@@ -10,7 +10,7 @@ function Card({ pokemon }: CardProps) {
   return (
     <CardBase className="cardPokemon ">
       <CardBase.Img
-        className=".cardImg"
+        className="cardImg"
         variant="top"
         src={pokemon.sprites.front_default}
       />

@@ -13,7 +13,7 @@ function App() {
 
   const pokemonGroups = useMemo<Array<Array<Pokemon>> | []>(() => {
     return data.reduce((dataSlice, item, index) => {
-      const chunkIndex = Math.floor(index / 3);
+      const chunkIndex = Math.floor(index / 6);
 
       if (!dataSlice[chunkIndex]) {
         (dataSlice[chunkIndex] as Array<never>) = [];
@@ -50,7 +50,11 @@ function App() {
       <Header />
       <Container fluid="lg">
         {pokemonGroups.map((group: Array<Pokemon>, index) => (
-          <CardGroup key={index} className="cardPokemon m-3 ">
+          <CardGroup
+            key={index}
+            className="cardPokemon m-3 
+          "
+          >
             {group.map((pokemon: Pokemon) => (
               <Card key={pokemon.id} pokemon={pokemon} />
             ))}
